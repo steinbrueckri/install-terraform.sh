@@ -1,9 +1,9 @@
 #!/bin/bash -
 
-readonly TERRAFORM_VERSION="0.7.0"
-readonly INSTALL_DIR="/usr/local/bin"
+readonly BASE_INSTALL_DIR="/opt/terraform"
+INSTALL_DIR=$BASE_INSTALL_DIR
+readonly SUPPORT_FILE=~/.terraform
 readonly DOWNLOAD_DIR="/tmp"
-readonly DOWNLOAD_URL="https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 readonly DOWNLOADED_FILE="$DOWNLOAD_DIR/terraform.zip"
 
 # Get distro data from /etc/os-release
