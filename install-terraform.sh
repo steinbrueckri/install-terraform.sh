@@ -21,7 +21,7 @@ setup() {
   fi
 
   if [ -f "$BASE_INSTALL_DIR/$TERRAFORM_VERSION/terraform" ]; then
-    echo "Destination dir $BASE_INSTALL_DIR/$TERRAFORM_VERSION already exists and contains the terraform executable. Cannot proceed."
+    echo "Destination dir $BASE_INSTALL_DIR/$TERRAFORM_VERSION already exists and contains the terraform executable. You can already use terraform."
     exit 1
   fi
 
