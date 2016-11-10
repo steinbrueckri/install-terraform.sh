@@ -73,7 +73,7 @@ add_helper() {
   echo "Writing $SUPPORT_FILE ..."
   cat >$SUPPORT_FILE <<EOF
 function terraform {
-  echo -n "Terraform wrapper: "
+  >&2 echo -n "Terraform wrapper: "
 EOF
 
   count=0
@@ -84,7 +84,7 @@ EOF
     else
       echo "  elif [ -f $i ]; then" >>$SUPPORT_FILE
     fi
-    echo -e "    echo \"found $i\"\n    /opt/terraform/$i/terraform \"\$@\"" >>$SUPPORT_FILE
+    echo -e "    >&2 echo \"found $i\"\n    /opt/terraform/$i/terraform \"\$@\"" >>$SUPPORT_FILE
     let "count = $count + 1"
   done
 
