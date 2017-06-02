@@ -1,8 +1,8 @@
 #!/bin/bash -
 
-readonly BASE_INSTALL_DIR="/opt/terraform"
+readonly BASE_INSTALL_DIR="~/bin/terraform"
 INSTALL_DIR=$BASE_INSTALL_DIR
-readonly SUPPORT_FILE=~/.terraform
+readonly SUPPORT_FILE=~/.terraformrc
 readonly DOWNLOAD_DIR="/tmp"
 readonly DOWNLOADED_FILE="$DOWNLOAD_DIR/terraform.zip"
 

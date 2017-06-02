@@ -84,7 +84,7 @@ EOF
     else
       echo "  elif [ -f $i ]; then" >>$SUPPORT_FILE
     fi
-    echo -e "    >&2 echo \"found $i\"\n    /opt/terraform/$i/terraform \"\$@\"" >>$SUPPORT_FILE
+    echo -e "    >&2 echo \"found $i\"\n    $BASE_INSTALL_DIR/$i/terraform \"\$@\"" >>$SUPPORT_FILE
     let "count = $count + 1"
   done
 
