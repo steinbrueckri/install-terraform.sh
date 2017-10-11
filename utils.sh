@@ -2,7 +2,7 @@
 
 readonly BASE_INSTALL_DIR="$HOME/bin/terraform"
 INSTALL_DIR=$BASE_INSTALL_DIR
-readonly SUPPORT_FILE=$HOME/.terraformrc
+readonly SUPPORT_FILE=$HOME/.terraform-helperrc
 readonly DOWNLOAD_DIR="/tmp"
 readonly DOWNLOADED_FILE="$DOWNLOAD_DIR/terraform.zip"
 
