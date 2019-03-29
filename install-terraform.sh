@@ -10,7 +10,7 @@ readonly ARGS="$@"
 source "${PROGDIR}/utils.sh"
 
 setup() {
-  LATEST_TERRAFORM=`curl -s https://releases.hashicorp.com/terraform/ | grep terraform_ | awk -F\" '{print $2}' | grep -v beta | head -1`
+  LATEST_TERRAFORM=`curl -s https://releases.hashicorp.com/terraform/ | grep terraform_ | awk -F\" '{print $2}' | egrep -v "alpha|beta|rc" | head -1`
 
   if [[ "$LATEST_TERRAFORM" =~ /terraform/([[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+) ]]; then
     TERRAFORM_VERSION=${BASH_REMATCH[1]}
