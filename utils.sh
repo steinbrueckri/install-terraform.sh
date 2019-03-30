@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-readonly BASE_INSTALL_DIR="$HOME/bin/terraform"
+readonly BASE_INSTALL_DIR="/usr/local/terraform"
 INSTALL_DIR=$BASE_INSTALL_DIR
 readonly SUPPORT_FILE=$HOME/.terraform-helperrc
 readonly DOWNLOAD_DIR="/tmp"
@@ -9,7 +9,6 @@ readonly DOWNLOADED_FILE="$DOWNLOAD_DIR/terraform.zip"
 # Get distro data from /etc/os-release
 readonly DISTRO_VER=$(awk -F'=' '/VERSION_ID/ {print $2}' /etc/os-release | tr -d '"')
 readonly DISTRO_ID=$(awk -F'=' '/ID/ {print $2; exit}' /etc/os-release | tr '[:upper:]' '[:lower:]')
-
 
 function warn() {
   echo -e "\033[1;33mWARNING: $1\033[0m"
