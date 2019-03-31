@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-readonly BASE_INSTALL_DIR="/usr/local/terraform"
+readonly BASE_INSTALL_DIR="/opt/terraform"
 INSTALL_DIR=$BASE_INSTALL_DIR
 readonly SUPPORT_FILE=$HOME/.terraform-helperrc
 readonly DOWNLOAD_DIR="/tmp"
